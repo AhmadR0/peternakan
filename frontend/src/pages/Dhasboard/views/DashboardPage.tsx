@@ -7,8 +7,8 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
-      <aside className={`${isSidebarOpen ? 'w-64' : 'w-20'} bg-green-800 text-white p-4 shadow-md transition-all duration-300`}>
-        <div className="border-b border-green-700 pb-4 mb-4 flex items-center justify-between">
+      <aside className={`${isSidebarOpen ? 'w-64' : 'w-20'} bg-blue-800 text-white p-4 shadow-md transition-all duration-300`}>
+        <div className="border-b border-blue-700 pb-4 mb-4 flex items-center justify-between">
           {isSidebarOpen ? (
             <h2 className="text-xl font-bold">SISTEM PAKAR DIAGNOSA PENYAKIT TERNAK SAPI</h2>
           ) : (
@@ -16,7 +16,7 @@ export default function Dashboard() {
           )}
           <button
             onClick={() => setSidebarOpen(!isSidebarOpen)}
-            className="p-2 rounded-full hover:bg-green-700 transition-colors"
+            className="p-2 rounded-full hover:bg-blue-700 transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export default function Dashboard() {
         </div>
         <ul className="space-y-2">
           <li 
-            className={`flex items-center p-2 rounded-lg hover:bg-green-700 cursor-pointer transition-colors ${activeTab === "dashboard" && "bg-green-700"}`}
+            className={`flex items-center p-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors ${activeTab === "dashboard" && "bg-blue-700"}`}
             onClick={() => setActiveTab("dashboard")}
           >
             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function Dashboard() {
             {isSidebarOpen && "Dashboard"}
           </li>
           <li 
-            className={`flex items-center p-2 rounded-lg hover:bg-green-700 cursor-pointer transition-colors ${activeTab === "diagnosa" && "bg-green-700"}`}
+            className={`flex items-center p-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors ${activeTab === "diagnosa" && "bg-blue-700"}`}
             onClick={() => setActiveTab("diagnosa")}
           >
             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function Dashboard() {
             {isSidebarOpen && "Diagnosa Penyakit"}
           </li>
           <li 
-            className={`flex items-center p-2 rounded-lg hover:bg-green-700 cursor-pointer transition-colors ${activeTab === "pengetahuan" && "bg-green-700"}`}
+            className={`flex items-center p-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors ${activeTab === "pengetahuan" && "bg-blue-700"}`}
             onClick={() => setActiveTab("pengetahuan")}
           >
             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@ export default function Dashboard() {
             {isSidebarOpen && "Basis Pengetahuan"}
           </li>
           <li 
-            className={`flex items-center p-2 rounded-lg hover:bg-green-700 cursor-pointer transition-colors ${activeTab === "riwayat" && "bg-green-700"}`}
+            className={`flex items-center p-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors ${activeTab === "riwayat" && "bg-blue-700"}`}
             onClick={() => setActiveTab("riwayat")}
           >
             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function Dashboard() {
             {isSidebarOpen && "Riwayat Diagnosa"}
           </li>
           <li 
-            className={`flex items-center p-2 rounded-lg hover:bg-green-700 cursor-pointer transition-colors ${activeTab === "pengaturan" && "bg-green-700"}`}
+            className={`flex items-center p-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors ${activeTab === "pengaturan" && "bg-blue-700"}`}
             onClick={() => setActiveTab("pengaturan")}
           >
             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +138,7 @@ export default function Dashboard() {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div 
-                        className="bg-green-600 h-2 rounded-full" 
+                        className="bg-blue-600 h-2 rounded-full" 
                         style={{ width: `${disease.percentage}%` }}
                       ></div>
                     </div>
@@ -162,19 +162,19 @@ export default function Dashboard() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Nama Pemilik</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Lokasi</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Umur Sapi</label>
-                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Jenis Sapi</label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                       <option value="">Pilih Jenis Sapi</option>
                       <option value="sapi_perah">Sapi Perah</option>
                       <option value="sapi_potong">Sapi Potong</option>
@@ -203,7 +203,7 @@ export default function Dashboard() {
                       <input 
                         type="checkbox" 
                         id={`symptom-${index}`} 
-                        className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                       />
                       <label htmlFor={`symptom-${index}`} className="ml-2 block text-sm text-gray-700">
                         {symptom}
@@ -214,7 +214,7 @@ export default function Dashboard() {
               </div>
 
               <div className="flex justify-end">
-                <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                   Proses Diagnosa
                 </button>
               </div>
@@ -235,10 +235,10 @@ export default function Dashboard() {
                   <input 
                     type="text" 
                     placeholder="Cari penyakit atau gejala..." 
-                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
-                <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                   Tambah Aturan
                 </button>
               </div>
@@ -268,7 +268,7 @@ export default function Dashboard() {
                         <td className="px-6 py-4 text-sm text-gray-500">{rule.symptom}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{rule.cf}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <button className="text-green-600 hover:text-green-900 mr-3">Edit</button>
+                          <button className="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
                           <button className="text-red-600 hover:text-red-900">Hapus</button>
                         </td>
                       </tr>
@@ -293,17 +293,17 @@ export default function Dashboard() {
                   <input 
                     type="text" 
                     placeholder="Cari berdasarkan nama atau penyakit..." 
-                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div className="flex space-x-2">
-                  <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                  <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="">Filter Bulan</option>
                     <option value="1">Januari</option>
                     <option value="2">Februari</option>
                     <option value="3">Maret</option>
                   </select>
-                  <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                  <select className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="">Filter Tahun</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
@@ -336,7 +336,7 @@ export default function Dashboard() {
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{history.result}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{history.cf}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <button className="text-green-600 hover:text-green-900">Detail</button>
+                          <button className="text-blue-600 hover:text-blue-900">Detail</button>
                         </td>
                       </tr>
                     ))}
@@ -364,7 +364,7 @@ export default function Dashboard() {
                       <input 
                         type="text" 
                         value="Sistem Pakar Diagnosa Penyakit Ternak Sapi" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         readOnly
                       />
                     </div>
@@ -373,7 +373,7 @@ export default function Dashboard() {
                       <input 
                         type="text" 
                         value="Certainty Factor" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         readOnly
                       />
                     </div>
@@ -382,7 +382,7 @@ export default function Dashboard() {
                       <input 
                         type="text" 
                         value="1.0.0" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         readOnly
                       />
                     </div>
@@ -391,7 +391,7 @@ export default function Dashboard() {
                       <input 
                         type="text" 
                         value="Tim Sistem Pakar UNISKA" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         readOnly
                       />
                     </div>
@@ -409,14 +409,14 @@ export default function Dashboard() {
                         min="0"
                         max="1"
                         value="0.5" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="flex justify-end">
-                  <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                     Simpan Perubahan
                   </button>
                 </div>
